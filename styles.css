@@ -25,15 +25,15 @@ button {
     background-color: #000000;
     border: none;
     color: white;
+    
 }
 
 #output {
     box-sizing: border-box;
     border: 1px solid black;
     width: 80%;
-    margin: 2rem auto;
-    min-height: 10vh;
-    max-height: 20vh;
+    margin: 1rem auto;
+    min-height: 20vh;
     overflow:scroll;
     padding: 1rem;
 }
@@ -66,3 +66,5 @@ footer p {
 h1{
     color: white;
 }
+
+  
