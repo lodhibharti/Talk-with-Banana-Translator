@@ -8,24 +8,25 @@ var outputDiv = document.querySelector("#output");
 
 var serverURL = "https://api.funtranslations.com/translate/minion.json";
 
-function getTranslationURL(text)
+function getTranslationURL(input)
 {
-   serverURL + "?" + "Text=" + input
+   return serverURL + "?" + "Text=" + input
 }
 
 function errorHandler(error) {
-   alert("Server is not responding currently! Try again after some time.");
+   alert("Server is not responding currently! Try again later.");
 }
 
 function clickHandler()
+{
 var inputText = txtInput.value;
 fetch (getTranslationURL(inputText))
-.then (Response=> Response.json())
+.then (response=> response.json())
 .then (json =>{
    var translatedText = json.contents.translated;
    outputDiv.innerText = translatedText;
 })
 .catch(errorHandler)
 };
-btnTranslate.addEventListener("click",clickHandler)
+btnTranslate.addEventListener("click",clickHandler);
 
