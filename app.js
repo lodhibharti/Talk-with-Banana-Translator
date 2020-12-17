@@ -1,6 +1,6 @@
-alert("Hello.!!")
-var userName=prompt("give your name");
-alert("welcome "+ userName);
+// alert("Hello.!!")
+// var userName=prompt("give your name");
+// alert("welcome "+ userName);
 
 var btnTranslate = document.querySelector("#btn-translate");
 var txtInput = document.querySelector("#txt-input");
@@ -21,8 +21,8 @@ function clickHandler()
 {
 var inputText = txtInput.value;
 fetch (getTranslationURL(inputText))
-.then (response=> response.json())
-.then (json =>{
+.then (response => response.json())
+.then (json => {
    var translatedText = json.contents.translated;
    outputDiv.innerText = translatedText;
 })
